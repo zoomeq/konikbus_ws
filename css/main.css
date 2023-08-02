@@ -7,8 +7,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-/* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
   appearance: textfield;
@@ -23,15 +21,25 @@ input[type=number] {
     width: 100%;
     margin: 0;
     height: auto;
+    background-image: url("../img/autobahn.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-y: 8rem;
+    background-attachment: fixed;
   }
   header{
     width: 100%;
     background-color: #aaa;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
   }
   main{
     width: 100%;
-    background-color: #ccc;
-    padding-bottom: 5rem;
+    background-color: transparent;
   }
   footer{
     width: 100%;
@@ -39,12 +47,11 @@ input[type=number] {
     background-color: #aaa;
   }
   .box{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 100%;
     height: auto;
     border: 1px solid transparent;
     text-align: center;
+    background-color: #ccc;
   }
   .insideboxof{
     float: left;
@@ -129,6 +136,16 @@ input[type=number] {
   }
   h3{
     margin: 0;
+  }
+  header > img{
+    height: 100%;
+    
+  }
+  #ofirmie{
+    background-color: transparent;
+  }
+  #praca{
+    padding-bottom: 5rem;
   }
 }
 
