@@ -236,7 +236,7 @@ input[type=number] {
     background-image: url("../img/autobahn_portrait.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position-y: -2rem;
+    background-position-y: 10rem;
     background-attachment: fixed;
   }
   header{
