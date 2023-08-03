@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/sendForm.css">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/svg">
     <title>Dziękujemy!</title>
 </head>
 <body>
-    <header>
-        <h1>TU BĘDZIE LOGO I NAZWA FIRMY</h1>
-    </header>
     <main>
     <?php 
     if(isset($_POST['imie'])){
@@ -64,9 +62,9 @@
 	    'tel2_1' => $_POST['tel2'], 					
     );
     if(db_newOrder($dbconn, $data, NULL, 'pl') === FALSE) {
-     echo '<h2>Nie udało się dodać przesyłki do bazy!</h2><p>Za chwilę nastąpi przekierowanie na stronę formularza...</p><script>setTimeout(function(){window.location.href = "./";}, 10000);</script>';
+     echo '<img src="../img/logo_name.svg" alt="KonikBus" id="logo_sendForm"><h2>Nie udało się dodać przesyłki do bazy!</h2><p>Za chwilę nastąpi przekierowanie na stronę formularza...</p><script>setTimeout(function(){window.location.href = "./";}, 5000);</script>';
     } else {
-     echo '<h2>Dziękujemy za nadanie przesyłki!</h2><p>Za chwilę nastąpi przekierowanie na stronę główną...</p><script>setTimeout(function(){window.location.href = "../";}, 10000);</script>';
+     echo '<img src="../img/logo_name.svg" alt="KonikBus" id="logo_sendForm"><h2>Dziękujemy za nadanie przesyłki!</h2><p>Za chwilę nastąpi przekierowanie na stronę główną...</p><script>setTimeout(function(){window.location.href = "../";}, 5000);</script>';
     }
     
      db_close($dbconn);

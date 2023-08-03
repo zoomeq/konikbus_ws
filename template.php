@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/svg">
     <title>KonikBus</title>
 </head>
 <body>

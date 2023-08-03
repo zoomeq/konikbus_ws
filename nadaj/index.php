@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/nadaj.css">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/svg">
     <script src="../js/nadaj.js"></script>
     <title>KonikBus</title>
 </head>
@@ -114,7 +115,7 @@
                 <div class="clear"></div>
                     <div id="nip1" class="float"><p>NIP:</p>
                     <input type="number" ame="nip" id="nip" min=1000000000 max=9999999999 required disabled></div>
-                    <div id="firma1" class="float"><p>Imię i nazwisko lub nazwa firmy:</p>
+                    <div id="firma1" class="float"><p>Imię i nazwisko/nazwa firmy:</p>
                     <input type="text" name="firma" id="firma" required disabled></div>
                     <div class="clear"></div>
                     <div id="firma_adres1" class="float"><p>Pełny adres:</p>

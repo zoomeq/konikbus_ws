@@ -22,6 +22,11 @@ input[type=number] {
     margin: 0;
     height: auto;
     background-color: #ccc;
+    background-image: url("../img/autobahn.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-y:8rem;
+    background-attachment: fixed;
   }
   header{
     width: 100%;
@@ -36,11 +41,6 @@ input[type=number] {
   }
   main{
     width: 100%;
-    background-image: url("../img/autobahn.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position-y:8rem;
-    background-attachment: fixed;
   }
   footer{
     width: 100%;
@@ -108,6 +108,10 @@ input[type=number] {
   }
   #jakrezerwowac{
     padding-bottom: 0;
+  }
+  #onas{
+    background-color: rgba(255,255,255,0.3);
+    font-weight: bolder;
   }
   #mapa, .others, .socialmedia{
       margin-top: 1rem;
