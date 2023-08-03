@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    color: #e30613;
 }
 @media only screen and (orientation: landscape) {
     main{
@@ -8,6 +7,7 @@
         height: 100%;
         padding: 5%;
         background-color: rgba(255,255,255,0.4);
+        color: #e30613;
     }
     #form_rezerwacje > h1{
         float: left;
@@ -123,6 +123,8 @@
         padding: 5%;
         overflow-x: hidden;
         font-size: 1.5rem;
+        background-color: #ccc;
+        color: #e30613;
     }
     .float{
         position: relative;

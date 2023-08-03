@@ -47,7 +47,7 @@
                 </div>  
                 <div id="usluga5" class="usluga">
                     <h2>Przeprowadzki <img src="./img/house.svg" alt="house"></h2>
-                    <a href=" "><p class="button_rezerw">Zarezerwuj termin</p></a>
+                    <a href=" "><p class="button_rezerw">Zapytaj o wolny termin</p></a>
                 </div>  
             </div>   
         </div>
