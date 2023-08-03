@@ -21,11 +21,7 @@ input[type=number] {
     width: 100%;
     margin: 0;
     height: auto;
-    background-image: url("../img/autobahn.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position-y: 8rem;
-    background-attachment: fixed;
+    background-color: #ccc;
   }
   header{
     width: 100%;
@@ -40,7 +36,11 @@ input[type=number] {
   }
   main{
     width: 100%;
-    background-color: transparent;
+    background-image: url("../img/autobahn.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-y:8rem;
+    background-attachment: fixed;
   }
   footer{
     width: 100%;
@@ -163,10 +163,9 @@ input[type=number] {
     justify-content: center;
   }
   .usluga{
-    height: 10rem;
+    height: fit-content;
     width: fit-content;
-    flex-basis: 30%;
-    overflow-y: auto;
+    flex-basis: 50%;
   }
   .usluga::-webkit-scrollbar {
     width: 0px;
@@ -233,11 +232,6 @@ input[type=number] {
     width: 100%;
     margin: 0;
     height: auto;
-    background-image: url("../img/autobahn_portrait.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position-y: 10rem;
-    background-attachment: fixed;
   }
   header{
     width: 100%;
@@ -252,7 +246,7 @@ input[type=number] {
   }
   main{
     width: 100%;
-    background-color: transparent;
+    background-color: #ccc;
   }
   footer{
     width: 100%;
@@ -386,15 +380,18 @@ input[type=number] {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .usluga > h2{
+    font-size: 20px;
+  }
   .usluga > h2 > img{
-    width: 30px;
-    height: auto;
+    width: auto;
+    height: 20px;
   }
   .usluga{
-    height: 10rem;
+    height: fit-content;
     width: fit-content;
     flex-basis: 100%;
-    overflow-y: auto;
+    margin-bottom: 1rem;
   }
   #obszar > h1{
     width: 80%;
@@ -417,10 +414,10 @@ input[type=number] {
     margin-right: 10%;
     padding-bottom: 2rem;
   }
-  #ofirmie{
-    background-color: rgba(255,255,255,0.4);
-    
+  header > img{
+    width: 90%;
   }
+
 }
 
 .dummy{
