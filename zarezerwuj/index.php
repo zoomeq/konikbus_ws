@@ -10,9 +10,11 @@
     <title>KonikBus</title>
 </head>
 <body onload="bodyLoad()">
-    <header>
-        TU IDZIE LOGO I NAZWA FIRMY
-    </header>
+    <a href="https://konikbus.pl">
+        <header>
+            <img src="../img/logo_name.svg" alt="KonikBus">
+        </header>
+    </a>
     <main>
         <form method="post" action="./sendForm.php" id="form_rezerwacje">
         <h1>Rezerwacja przejazdu</h1>
@@ -158,19 +160,18 @@
         </form>
     </main>
     <footer>
-        <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.1521140736904!2d17.72195073671201!3d53.893500222818595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47026be8a9cba0b5%3A0xdcdfac4914ec2638!2sSzypryt!5e0!3m2!1spl!2spl!4v1690134258742!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.5489552339001!2d17.23118784120886!3d53.62564690454602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4702317d8095dbf7%3A0x13f7424c0f25c105!2sChrz%C4%85stowo%2029A%2C%2077-300%20Chrz%C4%85stowo!5e0!3m2!1spl!2spl!4v1691049892222!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <span class="socialmedia">
             <pre>
 <h3>Znajdziesz nas również na:</h3>
-• <a href="https://facebook.com">Facebook</a>
-• <a href="https://instagram.com">Instagram</a>
-• <a href="https://tiktok.com">TikTok</a>
+• <a href="https://www.facebook.com/profile.php?id=100095320358728" target="blank">Facebook</a>
+• <a href="https://www.instagram.com/konikbus/" target="blank">Instagram</a>
+• <a href="https://www.tiktok.com/@konikbuskonik" target="blank">TikTok</a>
 • <a href="https://youtube.com">YouTube</a>
-
 <h3>Skontaktuj się z nami!</h3>
-• Tel. <a href="tel:+48 123132231">TU NUMER</a>
-• E-mail <a href="mailto:mial@konikbus.pl">TU MAIL</a>
-• Adres <a href="https://goo.gl/maps/fpCeX6e1Uhj5k2BZA">Mickiewicza 1A, 89-632 Brusy</a>
+• Tel.: <a href="tel:+48 510319999">+48 510 319 999</a>
+• E-mail: <a href="mailto:konikbus@gmail.com">konikbus@gmail.com</a>
+• Adres: <a href="https://goo.gl/maps/7xuJdQHSPyjCcQDn8">Chrząstowo 29A, 77-300 Człuchów</a>
             </pre>
         </span>
         <span class="others">
@@ -178,7 +179,7 @@
 Regulamin i inne gówna xd
             </pre>
         </span>
-        <iframe id="mapa2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.1521140736904!2d17.72195073671201!3d53.893500222818595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47026be8a9cba0b5%3A0xdcdfac4914ec2638!2sSzypryt!5e0!3m2!1spl!2spl!4v1690134258742!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe id="mapa2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.5489552339001!2d17.23118784120886!3d53.62564690454602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4702317d8095dbf7%3A0x13f7424c0f25c105!2sChrz%C4%85stowo%2029A%2C%2077-300%20Chrz%C4%85stowo!5e0!3m2!1spl!2spl!4v1691049892222!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="dummy"></div>        
     </footer>
 </body>
