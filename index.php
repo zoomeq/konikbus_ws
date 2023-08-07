@@ -17,11 +17,10 @@
     </a>
     <main>
         <div class="box" id="ofirmie">
-            <hr><h1>O Firmie</h1><hr>
             <div class="dummy"></div>
             <div id="onas" class="insideboxof ofir">
                 <h2>O Nas</h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In neque justo, dignissim in est id, pulvinar iaculis enim. Vivamus non mauris et justo interdum lacinia id nec eros. Aliquam ullamcorper maximus tellus interdum fermentum. Donec eu tristique enim, at auctor lectus. Nulla pellentesque leo in viverra viverra. Ut mauris purus, posuere sed eleifend quis, elementum sed leo. Nulla a consequat turpis. Mauris interdum scelerisque purus vitae maximus. Nulla massa metus, volutpat nec metus commodo, venenatis vestibulum purus. Sed et lobortis arcu. Maecenas in cursus magna. Integer id eleifend odio, quis mattis metus. Morbi id eleifend risus. Ut fermentum ligula neque, a auctor magna rhoncus sed. Aenean vestibulum lorem sit amet suscipit rutrum. Curabitur a hendrerit orci.
+                Nasza firma świadczy usługi w zakresie przewozu osób i rzeczy w skali międzynarodowej. Oferujemy przejazdy po kraju jak również za granicę. Obszar jaki znajduje się w zakresie naszej obsługi, znajdziecie Państwo w zakładce „Obsługiwany obszar”. Wyjazdy mamy codziennie przez całą dobę. Podchodzimy również indywidualnie do każdego naszego klienta. Posiadamy flotę, która zapewni Państwu bezpieczny dojazd do celu, „Door to door”. Zatrudniamy wykwalifikowaną kadrę, która posiada szerokie doświadczenie, aby spełnić Państwa oczekiwania. Nasze usługi gwarantują zarówno bezpieczeństwo jak i komfort podróży. Rezerwacji przejazdu można dokonać telefoniczne, poprzez SMS, WhatsApp, Messenger lub przez stronę On Line. Zapraszamy!
             </div>
             <div class="dummy"></div>
         </div>
@@ -102,7 +101,7 @@
         </span>
         <span class="others">
             <pre>
-Regulamin i inne gówna xd
+            • <a href="./regulamin/">Regulamin</a>
             </pre>
         </span>
         <iframe id="mapa2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.5489552339001!2d17.23118784120886!3d53.62564690454602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4702317d8095dbf7%3A0x13f7424c0f25c105!2sChrz%C4%85stowo%2029A%2C%2077-300%20Chrz%C4%85stowo!5e0!3m2!1spl!2spl!4v1691049892222!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
