@@ -17,7 +17,7 @@
     </a>
     <main>
         <div id="regulamin">
-            <h1>Regulamin przewozu osób i rzeczy<br>oraz usług oferowanych<br>przez Firmę KonikBus tel. +48 510 31 9999</h1><br><br>
+            <h1>Regulamin przewozu osób i rzeczy<br>oraz usług oferowanych<br>przez Firmę KonikBus<br>tel. +48 510 31 9999</h1><br><br>
             <h2>§ 1. ZAKRES ZOBOWIĄZANIA</h2>
             <p>1. Regulamin przewozu oraz świadczenia naszych usług, rezerwacji itp. określa warunki:<br>
             a) dokonania rezerwacji za pośrednictwem telefonu, e-mail, sms, komunikatorów
@@ -228,6 +228,7 @@
 • <a href="https://www.instagram.com/konikbus/" target="blank">Instagram</a>
 • <a href="https://www.tiktok.com/@konikbuskonik" target="blank">TikTok</a>
 • <a href="https://youtube.com">YouTube</a>
+
 <h3>Skontaktuj się z nami!</h3>
 • Tel.: <a href="tel:+48 510319999">+48 510 319 999</a>
 • E-mail: <a href="mailto:konikbus@gmail.com">konikbus@gmail.com</a>
@@ -236,7 +237,12 @@
         </span>
         <span class="others">
             <pre>
-            • <a href="../regulamin/">Regulamin</a>
+• <a href="../regulamin/">Regulamin</a>
+• <a href="../zarezerwuj/">Rezerwacja przejazdu</a>
+• <a href="../nadaj/">Nadanie przesyłki</a>
+• <a href="../wynajem/">Wynajem</a>
+• <a href="../przeprowadzki/">Przeprowadzki</a>
+• <a href="../praca/">Praca</a>
             </pre>
         </span>
         <iframe id="mapa2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.5489552339001!2d17.23118784120886!3d53.62564690454602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4702317d8095dbf7%3A0x13f7424c0f25c105!2sChrz%C4%85stowo%2029A%2C%2077-300%20Chrz%C4%85stowo!5e0!3m2!1spl!2spl!4v1691049892222!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../img/logo.svg" type="image/svg">
     <title>KonikBus</title>
 </head>
-<body onload="bodyLoad()">
+<body id="body" onload="bodyLoad()">
     <a href="https://konikbus.pl">
         <header>
             <img src="../img/logo_name.svg" alt="KonikBus">
@@ -137,6 +137,8 @@
                 <span id="info1" class="float"><p>Informacje dodatkowe:</p>
                 <textarea rows="5" cols="30"id="info" name="info"></textarea>
                 <div class="clear"></div>
+                <span id="regbut1" class="float"><p><input type="checkbox" name="regbut1" id="regbut1_1" class="float">Akceptuje <a id="regbut1a" href="../regulamin/" target="_blank">regulamin</a> usługi</p></span>
+                <div class="clear"></div>
                 <input type="submit" value="Zgłoś rezerwacje" id="zarezerwuj1" class="flaot">
                 </span>
                 <div class="clear"></div>
@@ -157,7 +159,9 @@
             <div class="clear"></div>
         </div>
         <input type="hidden" name="catId" value=65538>
-        <input type="submit" value="Zgłoś rezerwacje" id="zarezerwuj2" class="flaot">
+         <span id="regbut2" class="float"><p><input type="checkbox" name="regbut2" id="regbut2_1">Akceptuje <a id="regbut2a" href="../regulamin/" target="_blank">regulamin</a> usługi</p></span>
+         <div class="clear"></div>
+        <input type="submit" value="Zgłoś rezerwacje" id="zarezerwuj2" class="float">
         </form>
     </main>
     <footer>
@@ -169,6 +173,7 @@
 • <a href="https://www.instagram.com/konikbus/" target="blank">Instagram</a>
 • <a href="https://www.tiktok.com/@konikbuskonik" target="blank">TikTok</a>
 • <a href="https://youtube.com">YouTube</a>
+
 <h3>Skontaktuj się z nami!</h3>
 • Tel.: <a href="tel:+48 510319999">+48 510 319 999</a>
 • E-mail: <a href="mailto:konikbus@gmail.com">konikbus@gmail.com</a>
@@ -177,7 +182,12 @@
         </span>
         <span class="others">
             <pre>
-            • <a href="../regulamin/">Regulamin</a>
+• <a href="../regulamin/">Regulamin</a>
+• <a href="../zarezerwuj/">Rezerwacja przejazdu</a>
+• <a href="../nadaj/">Nadanie przesyłki</a>
+• <a href="../wynajem/">Wynajem</a>
+• <a href="../przeprowadzki/">Przeprowadzki</a>
+• <a href="../praca/">Praca</a>
             </pre>
         </span>
         <iframe id="mapa2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.5489552339001!2d17.23118784120886!3d53.62564690454602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4702317d8095dbf7%3A0x13f7424c0f25c105!2sChrz%C4%85stowo%2029A%2C%2077-300%20Chrz%C4%85stowo!5e0!3m2!1spl!2spl!4v1691049892222!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

@@ -119,6 +119,15 @@
         margin-top: 2px;
         margin-bottom: 2px;
     }
+    #regbut2{
+        display: none;
+    }
+    #regbut1a{
+        text-decoration: underline;
+    }
+    #regbut1a:hover{
+        color: #e30613;
+    }
 }
 @media only screen and (orientation: portrait) {
     main{
@@ -172,6 +181,22 @@
     #faktura{
         width: 50px;
         height: 50px;
+    }
+    #regbut2{
+        left: 9%;
+    }
+    #regbut2_1{
+        width: 50px;
+        height: 50px;
+    }
+    #regbut1{
+        display: none;
+    }
+    #regbut2a{
+        text-decoration: underline;
+    }
+    #regbut2a:hover{
+        color: #e30613;
     }
 }
 

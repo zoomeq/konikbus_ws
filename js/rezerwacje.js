@@ -1,6 +1,5 @@
 function bodyLoad(){
 
-
     const fakturaBox = document.getElementById("faktura");
     fakturaBox.addEventListener("change", () => {
         if(fakturaBox.checked){
