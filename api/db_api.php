@@ -502,37 +502,37 @@ function db_newOrder($conn, $data, $return_date, $lang) {
 
 	$message_content = db_messageForOrder($conn, $data, $return_date, $kategoria, null, $payment_form, $lang);
 	
-	// db_sendEmail($data['imie_nazwisko'], $data['email'], $message_title . ' (' . $payment_form . ')', $message_welcome . $message_content, COMPANY_EMAIL);
+	db_sendEmail($data['imie_nazwisko'], $data['email'], $message_title . ' (' . $payment_form . ')', $message_welcome . $message_content, COMPANY_EMAIL);
 	
-	// if(SEND_EMAIL_TO_CLIENT) {
-	// 	switch($lang) {
-	// 		case 'pl':
-	// 			$message_welcome = '<p>Witaj '. $data['imie_nazwisko'] . ',</p><p>dziękujemy za skorzystanie z naszego systemu rezerwacji on-line.<br>';
-	// 			$message_welcome .= 'Przyjęliśmy zlecenie o następującej treści:</p>';
-	// 			$message_regards = '<p>Z poważaniem,<br>zespół ' . COMPANY_NAME . '</p>';
-	// 			$message_content .= "\r\n";
-	// 			$message_content .= '<p>Jeśli wybrałeś/wybrałaś płatność przelewem, to otrzymasz dane do przelewu w osobnym e-mailu.</p>';
-	// 			$message_content .= "\r\n";
-	// 			$message_content .= "<p>W przypadku płatności u kierowcy prosimy o zgłaszanie wszystkich nieprawidłowości związanych z wysokością kwoty lub zadeklarowaną walutą płatności.</p>";
-	// 			$message_content .= "\r\n";
-	// 			$message_content .= '<p>Pamiętaj, że złożenie zlecenia (w dowolnej formie) jest równoznaczne z zawarciem umowy pomiędzy Tobą a przewoźnikiem i ma konsekwencje prawne, zarówno w stosunku do Ciebie jak i przewoźnika. Dlatego pamiętaj, aby jak najwcześniej anulować zlecenie w przypadku, gdy nie będziesz mógł/mogła skorzystać z jego usług. W przeciwnym razie przewoźnik może obciążyć Cię poniesionymi stratami. Nie blokuj miejsca innym pasażerom.</p>';
-	// 			$message_content .= "\r\n";
-	// 			break;
-	// 		default:
-	// 			$message_welcome = '<p>Dear '. $data['imie_nazwisko'] . '.</p><p>Thank you for using our booking service.<br>';
-	// 			$message_welcome .= 'We have received your booking with the following details:</p>';
-	// 			$message_regards = '<p>Sincerely,<br>' . COMPANY_NAME . ' team.</p>';
-	// 			$message_content .= "\r\n";
-	// 			$message_content .= '<p>If you have chosen payment by bank transfer, you will receive bank details in a separate email.</p>';
-	// 			$message_content .= "\r\n";
-	// 			$message_content .= '<p>If the payment is made directly to the driver, let us know if there are any inaccuracies regarding the price or the payment currency. </p>';
-	// 			$message_content .= "\r\n";
-	// 			$message_content .= '<p>Remember, booking a transport service (whether using the online booking system, by telephone, email or in person), constitutes a legal agreement between you and ' . COMPANY_NAME . '. Therefore, if you are unable to use the service you have booked, you need to cancel the booking in advance. Failure to do so may incur a fee.</p>';
-	// 			$message_content .= "\r\n";
-	// 			break;
-	// 	}
-	// 	db_sendEmail(COMPANY_NAME, COMPANY_EMAIL, $message_title, $message_welcome . $message_content. $message_regards, $data['email']);
-	// }
+	if(SEND_EMAIL_TO_CLIENT) {
+		switch($lang) {
+			case 'pl':
+				$message_welcome = '<p>Witaj '. $data['imie_nazwisko'] . ',</p><p>dziękujemy za skorzystanie z naszego systemu rezerwacji on-line.<br>';
+				$message_welcome .= 'Przyjęliśmy zlecenie o następującej treści:</p>';
+				$message_regards = '<p>Z poważaniem,<br>zespół ' . COMPANY_NAME . '</p>';
+				$message_content .= "\r\n";
+				$message_content .= '<p>Jeśli wybrałeś/wybrałaś płatność przelewem, to otrzymasz dane do przelewu w osobnym e-mailu.</p>';
+				$message_content .= "\r\n";
+				$message_content .= "<p>W przypadku płatności u kierowcy prosimy o zgłaszanie wszystkich nieprawidłowości związanych z wysokością kwoty lub zadeklarowaną walutą płatności.</p>";
+				$message_content .= "\r\n";
+				$message_content .= '<p>Pamiętaj, że złożenie zlecenia (w dowolnej formie) jest równoznaczne z zawarciem umowy pomiędzy Tobą a przewoźnikiem i ma konsekwencje prawne, zarówno w stosunku do Ciebie jak i przewoźnika. Dlatego pamiętaj, aby jak najwcześniej anulować zlecenie w przypadku, gdy nie będziesz mógł/mogła skorzystać z jego usług. W przeciwnym razie przewoźnik może obciążyć Cię poniesionymi stratami. Nie blokuj miejsca innym pasażerom.</p>';
+				$message_content .= "\r\n";
+				break;
+			default:
+				$message_welcome = '<p>Dear '. $data['imie_nazwisko'] . '.</p><p>Thank you for using our booking service.<br>';
+				$message_welcome .= 'We have received your booking with the following details:</p>';
+				$message_regards = '<p>Sincerely,<br>' . COMPANY_NAME . ' team.</p>';
+				$message_content .= "\r\n";
+				$message_content .= '<p>If you have chosen payment by bank transfer, you will receive bank details in a separate email.</p>';
+				$message_content .= "\r\n";
+				$message_content .= '<p>If the payment is made directly to the driver, let us know if there are any inaccuracies regarding the price or the payment currency. </p>';
+				$message_content .= "\r\n";
+				$message_content .= '<p>Remember, booking a transport service (whether using the online booking system, by telephone, email or in person), constitutes a legal agreement between you and ' . COMPANY_NAME . '. Therefore, if you are unable to use the service you have booked, you need to cancel the booking in advance. Failure to do so may incur a fee.</p>';
+				$message_content .= "\r\n";
+				break;
+		}
+		db_sendEmail(COMPANY_NAME, COMPANY_EMAIL, $message_title, $message_welcome . $message_content. $message_regards, $data['email']);
+	}
 
 	$order_id = db_insertOrder($conn, $data);
 	if(!$order_id) {

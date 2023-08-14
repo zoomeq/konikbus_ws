@@ -1,4 +1,21 @@
 function bodyLoad(){
+    if(window.innerHeight >= window.innerWidth){
+        document.getElementById("regbut2_1").disabled = false;
+        document.getElementById("regbut1_1").disabled = true;
+    }else{
+        document.getElementById("regbut2_1").disabled = true;
+        document.getElementById("regbut1_1").disabled = false;
+    };
+
+    window.addEventListener('resize', function(){
+        if(this.innerHeight >= this.innerWidth){
+            document.getElementById("regbut2_1").disabled = false;
+            document.getElementById("regbut1_1").disabled = true;
+        }else{
+            document.getElementById("regbut2_1").disabled = true;
+            document.getElementById("regbut1_1").disabled = false;
+        }
+    });
 
     const fakturaBox = document.getElementById("faktura");
     fakturaBox.addEventListener("change", () => {
@@ -243,48 +260,35 @@ function bodyLoad(){
     const nip = document.getElementById('nip');
     const firma = document.getElementById('firma');
     const dane_faktura = document.getElementById('dane_faktura');
-    let fJSON = []
-    let j = 0;
-    let adress_index, company_index, tax_index;
-
+    let fJSON = {
+        adres:null,
+        nip:null,
+        nazwa:null
+    };
     firma_adres.addEventListener("change", () => {
-        if(firma_adres.value != '' && isNaN(adress_index)){
-            fJSON.push(`{"adres":"${firma_adres.value}"}`);
-            adress_index = j;
-            j++;
-        }else if(firma_adres.value != '' && !isNaN(adress_index)){
-            fJSON[adress_index] = `{"adres":"${firma_adres.value}"}`
+        if(firma_adres.value != ''){
+            fJSON.adres = `${firma_adres.value}`;
         }else{
-            fJSON.pop(adress_index);
-            i--;
+            fJSON.adres = null;
         }
-        dane_faktura.value = "["+fJSON.join(',')+"]";
+        dane_faktura.value = JSON.stringify(fJSON);
     });
     nip.addEventListener("change", () => {
-        if(nip.value != '' && isNaN(tax_index)){
-            fJSON.push(`{"nip":${nip.value}}`);
-            tax_index = j;
-            j++;
-        }else if(nip.value != '' && !isNaN(tax_index)){
-            fJSON[tax_index] = `{"nip":${nip.value}}`
+        if(nip.value != ''){
+            fJSON.nip =`${nip.value}`;
         }else{
-            fJSON.pop(tax_index);
-            i--;
+            fJSON.nip = null;
         }
-        dane_faktura.value = "["+fJSON.join(',')+"]";
+        dane_faktura.value = JSON.stringify(fJSON);
     });
     firma.addEventListener("change", () => {
-        if(firma.value != '' && isNaN(company_index)){
-            fJSON.push(`{"nazwa":"${firma.value}"}`);
-            company_index = j;
-            j++;
-        }else if(firma.value != '' && !isNaN(company_index)){
-            fJSON[company_index] = `{"nazwa":"${firma.value}"}`
+        if(firma.value != ''){
+            fJSON.nazwa =`${firma.value}`;
+
         }else{
-            fJSON.pop(company_index);
-            i--;
+            fJSON.nazwa = null;
         }
-        dane_faktura.value = "["+fJSON.join(',')+"]";
+        dane_faktura.value = JSON.stringify(fJSON);
     });
 
 

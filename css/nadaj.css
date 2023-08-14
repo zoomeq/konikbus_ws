@@ -116,7 +116,6 @@
         overflow-x: hidden;
         font-size: 1.5rem;
         background-color: #ccc;
-        color: #e30613;
     }
     .float{
         position: relative;
@@ -165,8 +164,6 @@
     }
     #regbut1a{
         text-decoration: underline;
-    }
-    #regbut1a:hover{
         color: #e30613;
     }
 }

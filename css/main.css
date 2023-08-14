@@ -27,6 +27,7 @@ input[type=number] {
     background-size: 100% auto;
     background-position-y:8rem;
     background-attachment: fixed;
+    overflow-x: hidden;
   }
   header{
     width: 100%;
@@ -70,22 +71,7 @@ input[type=number] {
     border-radius: 20px;
     padding: 2%;
   }
-  
-  .country{
-    float: left;
-    width: 40%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 5rem;
-    border: 2px #e30613 solid;
-    border-radius: 20px;
-    padding: 2%;
-  }
-  #lux{
-    margin-left: 30%;
-    margin-right: 30%;
-  }
-  ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
     width: 10px;
   }
   ::-webkit-scrollbar-track {
@@ -187,9 +173,6 @@ input[type=number] {
   #mapa2{
     display: none;
   }
-  h3{
-    margin: 0;
-  }
   header > img{
     height: 100%;
     
@@ -234,7 +217,55 @@ input[type=number] {
     margin-left: auto;
     margin-right: auto;
   }
-}
+  .insidepraca > p{
+    font-weight: 700;
+  }
+  h3{
+    margin-block-end: -1rem;
+    margin-block-start: 1rem;
+  }
+  h3.social{
+    margin-block-end: -1rem;
+    margin-block-start: 1rem;
+  }
+  .country{
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5rem;
+    border: 2px #e30613 solid;
+    border-radius: 20px;
+    padding: 2%;
+  }
+  #col1{
+    width: 50%;
+    float: left;
+  }
+  #col2{
+    width: 50%;
+    float: left;
+  }
+  #map_pl, #map_de, #map_be, #map_nl, #map_lu{
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #lu{
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+  #planeta{
+    position: relative;
+    left: 87.7%;
+    bottom: 95%;
+  }
+  #planeta_img{
+   height: 320px;
+   width: fit-content;
+   margin: 0;
+  }
+  }
 
 
 @media only screen and (orientation: portrait) {
@@ -242,6 +273,7 @@ input[type=number] {
     width: 100%;
     margin: 0;
     height: auto;
+    overflow-x: hidden;
   }
   header{
     width: 100%;
@@ -430,7 +462,24 @@ input[type=number] {
   header > img{
     width: 90%;
   }
-
+  .insidepraca > p{
+    font-weight: 700;
+  }
+  h3{
+    margin-block-end: -1rem;
+    margin-block-start: 1rem;
+  }
+  h3.social{
+    margin-block-end: -1rem;
+    margin-block-start: 1rem;
+  }
+  #map_pl, #map_de, #map_be, #map_nl, #map_lu{
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #planeta{
+    display: none;
+  }
 }
 
 .dummy{

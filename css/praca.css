@@ -1,59 +1,156 @@
-main{
-    background-color: rgba(255,255,255,0.5);
-    font-weight: bolder;
-    font-size: 110%;
-    line-height: 1.5;
+@media only screen and (orientation: landscape) {
+    main{
+        background-color: rgba(255,255,255,0.5);
+        font-weight: bolder;
+        font-size: 110%;
+        line-height: 2;
+
+    }
+    h2{
+        margin: 0;
+    }
+    #form_praca{
+        padding-top: 5%;
+        padding-bottom: 7%;
+        width: 25%;
+        margin-left: 15%; 
+        float: left;
+    }
+    .formField{
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px #333 solid;
+        color: #e30613;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    #cv, #prawko{
+        width: 50%;
+        float: left;
+    }
+    #file{
+        width: 99%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px #333 solid;
+        color: #e30613;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-top: 7px;
+        padding-left: 7px;
+    }
+    #file2{
+        width: 99%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px #333 solid;
+        color: #e30613;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-top: 7px;
+        padding-left: 7px;
+    }
+    #sendBtn{
+        width: 50%;
+        margin-top: 10px;
+        margin-left: 25%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px #333 solid;
+        color: #e30613;
+    }
+    #message{
+        width: 100%;
+        height: 80px;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px #333 solid;
+        color: #e30613;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding: 2px;
+        resize: none;
+    }
+    #tlewo{
+        padding-top: 10%;
+        width: 40%;
+        margin-left: 10%;
+        margin-right: 10%; 
+        float: left;
+    }
+    #tlewo_img{
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
-h2{
-    margin: 0;
+.clear{
+    clear: both;
 }
-#form_praca{
-    padding-top: 5%;
-    padding-bottom: 15%;
-    width: 20%;
-    margin-left: 20%; 
-}
-.formField{
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    background-color: white;
-    border: 2px #333 solid;
-    color: #e30613;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-#file{
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    background-color: white;
-    border: 2px #333 solid;
-    color: #e30613;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding-top: 7px;
-    padding-left: 7px;
-}
-#sendBtn{
-    width: 50%;
-    margin-top: 10px;
-    margin-left: 25%;
-    height: 40px;
-    border-radius: 10px;
-    background-color: white;
-    border: 2px #333 solid;
-    color: #e30613;
-}
-#message{
-    width: 100%;
-    height: 80px;
-    border-radius: 10px;
-    background-color: white;
-    border: 2px #333 solid;
-    color: #e30613;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding: 2px;
-    resize: none;
+@media only screen and (orientation: portrait) {
+    main{
+        background-color: #ccc;
+        font-size: 120%;
+        line-height: 2;
+    }
+    h2{
+        margin: 0;
+    }
+    #form_praca{
+        padding-top: 5%;
+        padding-bottom: 15%;
+        width: 70%;
+        margin-left: 15%; 
+    }
+    .formField{
+        width: 100%;
+        height: 50px;
+        border-radius: 15px;
+        background-color: white;
+        border: 2px #333 solid;
+        color: #e30613;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    #file{
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px #333 solid;
+        color: #e30613;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-top: 7px;
+        padding-left: 7px;
+    }
+    #sendBtn{
+        width: 50%;
+        margin-top: 10px;
+        margin-left: 25%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px #333 solid;
+        color: #e30613;
+    }
+    #message{
+        width: 100%;
+        height: 80px;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px #333 solid;
+        color: #e30613;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding: 2px;
+        resize: none;
+    }
+    #tlewo{
+        display: none;
+    }
 }

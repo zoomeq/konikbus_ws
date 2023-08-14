@@ -10,11 +10,9 @@
     <title>KonikBus</title>
 </head>
 <body>
-    <a href="https://konikbus.pl">
         <header>
             <img src="./img/logo_name.svg" alt="KonikBus">
         </header>
-    </a>
     <main>
         <div class="box" id="ofirmie">
             <div class="dummy"></div>
@@ -53,46 +51,75 @@
         <div class="box" id="obszar">
             <hr><h1>Obsługiwany Obszar</h1><hr>
             <div class="dummy"></div>
-            <div class="country">
-                <h2>Polska</h2>
-                TU MAPA Z OBSZAREM
+            <div id="col1">
+                <div class="country" id="pl">
+                    <h2>Polska</h2>
+                    <img src="./img/pl.png" alt="Mapa Polski" id="map_pl">
+                </div>
+                <div class="country" id="de">
+                    <h2>Niemcy</h2>
+                    <img src="./img/de.png" alt="Mapa Niemcy" id="map_de">
+                </div>
+            
+             
+            </div>  
+            <div id="col2">
+            <div class="country" id="nl">
+                    <h2>Holandia</h2>
+                    <img src="./img/nl.png" alt="Mapa Holadni" id="map_nl">
+                </div>
+                <div class="country" id="be">
+                    <h2>Belgia</h2>  
+                    <img src="./img/be.png" alt="Mapa Belgi" id="map_be">
+                </div>
+          
+
             </div>
-            <div class="country">
-                <h2>Niemcy</h2>
-                TU MAPA Z OBSZAREM
-            </div>
-            <div class="country">
-                <h2>Belgia</h2>  
-                TU MAPA Z OBSZAREM 
-            </div>
-            <div class="country">
-                <h2>Holandia</h2>
-                TU MAPA Z OBSZAREM
-            </div>
-            <div class="country" id="lux">
-                <h2>Luksemburg</h2>
-                TU MAPA Z OBSZAREM
-            </div>
+            <div class="country" id="lu">
+                    <h2>Luksemburg</h2>
+                    <img src="./img/lu.png" alt="Mapa Luksemburga" id="map_lu">
+                </div>
             <div class="dummy"></div>
         </div>
         <div class="box" id="praca">
             <hr><h1>Pracuj z nami</h1><hr>
             <div class="dummy"></div>
             <div class="insidepraca">
-                <p>Jeżeli jesteś zainteresowany pracą jako kierowca w naszej firmie, wypełnij formularz, a na pewno się skontaktujemy.</p>
+                <p>Jeżeli jesteś zainteresowany pracą w naszej firmie, wypełnij formularz, a na pewno się skontaktujemy.</p>
                 <a href="./praca/" ><p class="button_rezerw">Wypełnij formularz :)</p></a>
             </div>
         </div>
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "108901722292683");
+    chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+        xfbml            : true,
+        version          : 'v17.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
     </main>
     <footer>
         <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.5489552339001!2d17.23118784120886!3d53.62564690454602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4702317d8095dbf7%3A0x13f7424c0f25c105!2sChrz%C4%85stowo%2029A%2C%2077-300%20Chrz%C4%85stowo!5e0!3m2!1spl!2spl!4v1691049892222!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <span class="socialmedia">
             <pre>
-<h3>Znajdziesz nas również na:</h3>
-• <a href="https://www.facebook.com/profile.php?id=100095320358728" target="blank">Facebook</a>
-• <a href="https://www.instagram.com/konikbus/" target="blank">Instagram</a>
-• <a href="https://www.tiktok.com/@konikbuskonik" target="blank">TikTok</a>
-• <a href="https://youtube.com">YouTube</a>
+<h3 class="social">Znajdziesz nas również na:</h3>
+<span class="socialimage"><a target="blank" href="https://www.facebook.com/profile.php?id=100095320358728"><img height="64px" src="./img/facebook.svg" alt="Facebook"></a></span> <span class="socialimage"><a target="blank" href="https://www.instagram.com/konikbus/"><img height="64px" src="./img/instagram.svg" alt="Instagram"></a></span> <span class="socialimage"><a target="blank" href="https://wa.me/48510319999"><img height="64px" src="./img/whatsapp.svg" alt="Whatsapp"></a></span> <span class="socialimage"><a target="blank" href="https://www.tiktok.com/@konikbuskonik"><img height="64px" src="./img/tiktok.svg" alt="TikTok"></a></span> <span class="socialimage"><a target="blank" href="https://youtube.com"><img height="64px" src="./img/youtube.svg" alt="Youtube"></a></span>
 <h3>Skontaktuj się z nami!</h3>
 • Tel.: <a href="tel:+48 510319999">+48 510 319 999</a>
 • E-mail: <a href="mailto:konikbus@gmail.com">konikbus@gmail.com</a>
@@ -109,6 +136,9 @@
 • <a href="./praca/">Praca</a>
             </pre>
         </span>
+        <div id="planeta">
+            <img src="./img/planeta.png" id="planeta_img">
+        </div>
         <iframe id="mapa2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.5489552339001!2d17.23118784120886!3d53.62564690454602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4702317d8095dbf7%3A0x13f7424c0f25c105!2sChrz%C4%85stowo%2029A%2C%2077-300%20Chrz%C4%85stowo!5e0!3m2!1spl!2spl!4v1691049892222!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="dummy"></div>        
     </footer>
