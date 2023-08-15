@@ -41,7 +41,7 @@ input[type=number] {
     z-index: 10;
   }
   #header1{
-    height: 16rem;
+    height: 18rem;
     padding-bottom: 1rem;
   }
   #header1 > h2 > a > img{
@@ -50,14 +50,14 @@ input[type=number] {
     top: 0.3em;
   } 
   #himg1{
-    width: 250px;
+    width: 200px;
     height: auto;
     position: absolute;
     top: 40px;
     left: 40px;
   }
   #himg2{
-    max-height: 70%;
+    max-height: 60%;
     flex-basis: 100%;
   }
   header > h1{
@@ -68,6 +68,12 @@ input[type=number] {
 
   header > h2{
     margin: 0;
+    flex-basis: 100%;
+    text-align: center;
+  }
+  #za50{
+    color: rgb(186, 186, 0);
+    -webkit-text-stroke: #333 1px;
   }
   main{
     width: 100%;
@@ -324,6 +330,12 @@ input[type=number] {
   }
   header > h2{
     margin: 0;
+    flex-basis: 100%;
+    text-align: center;
+  }
+  #za50{
+    color: rgb(186, 186, 0);
+    -webkit-text-stroke: #333 1px;
   }
   #header1 > h2 > a > img{
     height: 1.3em;
@@ -331,7 +343,7 @@ input[type=number] {
     top: 0.3em;
   } 
  #himg2{
-    max-height: 100%;
+    max-height: 60%;
   }
   #himg1{
     display: none;

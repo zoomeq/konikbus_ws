@@ -14,7 +14,8 @@
             <img id="himg2"src="./img/logo_name.svg" alt="KonikBus">
             <h1>Międzynarodowy przewóz osób i rzeczy</h1>
             <h2><a href="tel:+48 510319999"><img src="./img/phone.svg" alt="phone">+48 510 31 99 99</a></h2>
-            <img id="himg1" src="./img/7za50.png">
+            <!-- <img id="himg1" src="./img/7za50.png"> -->
+            <h2 id="za50">7 przejazd za 50% ceny</h2>
         </header>
     <main>
         <div class="box" id="ofirmie_img">
