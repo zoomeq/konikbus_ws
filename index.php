@@ -13,7 +13,7 @@
         <header id="header1">
             <img id="himg2"src="./img/logo_name.svg" alt="KonikBus">
             <h1>Międzynarodowy przewóz osób i rzeczy</h1>
-            <h2><a href="tel:+48 510319999">+48 510 31 99 99</a></h2>
+            <h2><a href="tel:+48 510319999"><img src="./img/phone.svg" alt="phone">+48 510 31 99 99</a></h2>
             <img id="himg1" src="./img/7za50.png">
         </header>
     <main>
