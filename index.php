@@ -48,7 +48,7 @@
                 </div>   
                 <div id="usluga4" class="usluga">
                     <h2>Usługa auto-lawety <img src="./img/checkEngine.svg" alt="checkEngine"></h2>
-                    <a href=" "><p class="button_rezerw">Wezwij pomoc</p></a>
+                    <a href="tel:+48 510319999"><p class="button_rezerw">Wezwij pomoc</p></a>
                 </div>  
                 <div id="usluga5" class="usluga">
                     <h2>Przeprowadzki <img src="./img/house.svg" alt="house"></h2>

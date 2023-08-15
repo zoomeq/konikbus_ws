@@ -72,7 +72,7 @@ input[type=number] {
     text-align: center;
   }
   #za50{
-    color: rgb(186, 186, 0);
+    color: #e30613;
     -webkit-text-stroke: #333 1px;
   }
   main{
@@ -305,7 +305,7 @@ input[type=number] {
     height: auto;
     overflow-x: hidden;
   }
-  header{
+  #header1{
     width: 100%;
     background-color: #aaa;
     height: 25rem;
@@ -316,7 +316,21 @@ input[type=number] {
     top: 0;
     z-index: 10;
   }
-  header > h1{
+  header{
+    width: 100%;
+    background-color: #aaa;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header > img{
+    height: 100%;
+  }
+  #header1 > h1{
     flex-basis: 100%;
     text-align: center;
     margin: 0;
@@ -328,13 +342,13 @@ input[type=number] {
     width: 100%;
     height: auto;
   }
-  header > h2{
+  #header1 > h2{
     margin: 0;
     flex-basis: 100%;
     text-align: center;
   }
   #za50{
-    color: rgb(186, 186, 0);
+    color: #e30613;
     -webkit-text-stroke: #333 1px;
   }
   #header1 > h2 > a > img{
