@@ -26,12 +26,12 @@
         margin-left: 2px;
         margin-right: 2px;
     }
-    #cv, #prawko{
+    #data_od1, #data_do1, #adres_p11, #adres_p22, #cv, #prawko{
         width: 50%;
         float: left;
     }
     #file{
-        width: 99%;
+        width: 100%;
         height: 40px;
         border-radius: 10px;
         background-color: white;
