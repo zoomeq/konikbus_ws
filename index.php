@@ -10,14 +10,16 @@
     <title>KonikBus</title>
 </head>
 <body>
-        <header>
-            <img src="./img/logo_name.svg" alt="KonikBus">
+        <header id="header1">
+            <img id="himg2"src="./img/logo_name.svg" alt="KonikBus">
             <h1>Międzynarodowy przewóz osób i rzeczy</h1>
             <h2><a href="tel:+48 510319999">+48 510 31 99 99</a></h2>
+            <img id="himg1" src="./img/7za50.png">
         </header>
     <main>
         <div class="box" id="ofirmie_img">
-            <img src="./img/3w1.png">
+            <img id="oimg1" src="./img/3w1.png">
+            <img id="oimg2" src="./img/tlewotlo.png">
         </div>
         <div class="box" id="ofirmie">
             <div class="dummy"></div>
@@ -91,7 +93,7 @@
             <div class="dummy"></div>
             <div class="insidepraca">
                 <p>Jeżeli jesteś zainteresowany pracą w naszej firmie, wypełnij formularz, a na pewno się skontaktujemy.</p>
-                <a href="./praca/" ><p class="button_rezerw">Wypełnij formularz :)</p></a>
+                <a href="./praca/" ><p class="button_rezerw">Wypełnij formularz</p></a>
             </div>
         </div>
     <div id="fb-root"></div>

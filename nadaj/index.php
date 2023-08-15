@@ -84,7 +84,7 @@
             <span id="szczegoly" class="float">
                 <h2>Szczegóły rezerwacji</h2>
                     <span id="data1" class="float"><p>Data nadania:</p>
-                    <input type="date" class="pole" name="data1" required></span>
+                    <input type="date" class="pole" name="data1" min="<?php echo date("Y-m-d"); ?>" required></span>
                 <span class="float"><p>Ilość:</p>
                 <select name="ilosc_bagazu" class="pole" id="ilosc_bagazu">
                     <option value=1>1</option>

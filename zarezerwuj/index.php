@@ -66,7 +66,7 @@
             <span id="szczegoly" class="float">
                 <h2>Szczegóły rezerwacji</h2>
                     <span id="data1" class="float"><p>Data wyjazdu:</p>
-                    <input type="date" class="pole" name="data1" required></span>
+                    <input type="date" class="pole" min="<?php echo date("Y-m-d"); ?>" name="data1" required></span>
                     <span class="float"><p>Liczba osób:</p>
                     <select name="ilosc_osob" id="ilosc_osob" class="pole2" required>
                         <Option value="1">1</Option>
@@ -106,7 +106,7 @@
                     <option value=2>2</option>
                 </select></span>
                 <span id="data2" class="float"><p>Data powrotu:</p>
-                <input type="date" class="pole" name="data2"></span>
+                <input type="date" class="pole" min="<?php echo date("Y-m-d"); ?>" name="data2"></span>
                 <div class="clear"></div>
                 <span id="platnosc" class="float"><p>Płatność:</p>
                 <select name="platnosc" class="pole" id="platnosc" required>

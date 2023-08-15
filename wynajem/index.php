@@ -19,7 +19,7 @@
         <div id="form_praca">
         <h2>Wynajmij auto</h2>
         <div id="send_form_status"></div>
-        <form method="post" action="" id="contact_form" enctype="multipart/form-data">
+        <form method="post" action="sendForm.php" id="contact_form" enctype="multipart/form-data">
             <p>Imię i nazwisko:</p>
             <input type="text" name="name" id="name" class="formField"/>
             <p>Numer telefonu:</p>
@@ -30,14 +30,14 @@
             <input type="text" name="adres" id="adres" class="formField"/>
             <div id="data_od1">
                 <p>Od:</p>
-                 <input type="date" name="data_od" id="data_od" class="formField">
+                 <input type="date" name="data_od" id="data_od" min="<?php echo date("Y-m-d"); ?>" class="formField">
             </div>
             <div id="data_do1">
                 <p>Do:</p>
-                <input type="date" name="data_do" id="data_do" class="formField">
+                <input type="date" name="data_do" id="data_do" min="<?php echo date("Y-m-d"); ?>" class="formField">
             </div>
             <div class="clear"></div>
-            <p>Skan prawa jazdy: (pdf)</p>
+            <p>Skan prawa jazdy:</p>
             <input type="file" name="attachment" id="file">
             <button id="sendBtn">Wyślij</button>
         </form>

@@ -57,7 +57,7 @@
                         // Upload file to the server 
                         if(move_uploaded_file($_FILES["attachment"]["tmp_name"], $targetFilePath)){ 
                             $uploadedFile = $targetFilePath; 
-                            $statusMsg = "Dziękujemy za wysłanie zgłoszenia!";
+                            $statusMsg = "Otrzymaliśmy maila. Wkrótce ktoś się z tobą skontaktuje.";
                         }else{ 
                             $uploadStatus = 0; 
                             $statusMsg = "Przepraszamy, wystąpił błąd podczas przesyłania twojego CV. Spróbuj ponownie przesłać formularz."; 
@@ -70,7 +70,7 @@
                         // Upload file to the server 
                         if(move_uploaded_file($_FILES["attachment2"]["tmp_name"], $targetFilePath2)){ 
                             $uploadedFile2 = $targetFilePath2; 
-                            $statusMsg = "Dziękujemy za wysłanie zgłoszenia!";
+                            $statusMsg = "Otrzymaliśmy maila. Wkrótce ktoś się z tobą skontaktuje.";
                         }else{ 
                             $uploadStatus = 0; 
                             $statusMsg = "Przepraszamy, wystąpił błąd podczas przesyłania twojego skanu prawa jazdy. Spróbuj ponownie przesłać formularz."; 
@@ -141,7 +141,7 @@
                             $message .= "--{$mime_boundary}\n"; 
                             $message2 .= "--{$mime_boundary}\n"; 
                             $fp2 =    fopen($uploadedFile2,"rb"); 
-                            $data2 =  fread($fp,filesize($uploadedFile2)); 
+                            $data2 =  fread($fp2,filesize($uploadedFile2)); 
                             fclose($fp2); 
                             $data2 = chunk_split(base64_encode($data2)); 
                             $message .= "Content-Type: application/octet-stream; name=\"".basename($uploadedFile2)."\"\n" .  
@@ -164,16 +164,21 @@
                         @unlink($uploadedFile); 
                         @unlink($uploadedFile2); 
                     }else{ 
-                            // Set content-type header for sending HTML email 
+                        // Set content-type header for sending HTML email 
                         $headers .= "\r\n". "MIME-Version: 1.0"; 
                         $headers .= "\r\n". "Content-type:text/html;charset=UTF-8"; 
+                        $headers2 .= "\r\n". "MIME-Version: 1.0"; 
+                        $headers2 .= "\r\n". "Content-type:text/html;charset=UTF-8"; 
                         // Send email 
                         $mail = mail($toEmail, $emailSubject, $htmlContent, $headers);  
-                        $mail2 = mail($from, $emailSubject, $htmlContent2, $headers2);  
+                        $mail2 = mail($from, $emailSubject2, $htmlContent2, $headers2);  
                     };
                     
-                    // If mail sent 
-                    print($statusMsg);
+                    if($mail){
+                        print($statusMsg);
+                    }else{
+                        print("Coś poszło nie tak podczas wysyłania maila. Spróbuj ponownie.")
+                    }
                 };
             };
         };

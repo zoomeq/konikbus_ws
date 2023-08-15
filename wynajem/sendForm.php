@@ -15,11 +15,12 @@
         //name (imie i nazwisko); phone(numer telefonu); email (email); adres (adres); data_od (od); data_do (do); attachment (skan prawka);
         // Email settings 
         $toEmail = "konikbus@gmail.com"; // Recipient email 
+        $toName = "Iwona Buza";
         $from = $_POST["email"]; // Sender email 
         $fromName = $_POST['name']; // Sender name 
         
-        $attachmentUploadDir = "./uploads/"; 
-        $allowFileTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg', 'gif'); 
+        $attachmentUploadDir = "../uploads/"; 
+        $allowFileTypes = array('pdf', 'jpg', 'png', 'jpeg', 'gif'); 
         
         
         /* Form submission handler code */ 
@@ -30,6 +31,10 @@
             $postData = $_POST; 
             $name = trim($_POST['name']); 
             $email = trim($_POST['email']); 
+            $phone = $_POST['phone'];
+            $adres = $_POST['adres'];
+            $data_od = $_POST['data_od'];
+            $data_do = $_POST['data_do'];
             $subject = trim("Zgłoszenie do pracy."); 
             $message = trim($_POST['message']); 
                     
@@ -37,7 +42,6 @@
             if(empty($valErr)){ 
                 $uploadStatus = 1; 
                 // Upload attachment file 
-                print_r($_POST["attachment"]["name"]);
                 if(!empty($_FILES["attachment"]["name"])){ 
                    
                     
@@ -52,29 +56,41 @@
                         // Upload file to the server 
                         if(move_uploaded_file($_FILES["attachment"]["tmp_name"], $targetFilePath)){ 
                             $uploadedFile = $targetFilePath; 
+                            $statusMsg = "Otrzymaliśmy maila. Wkrótce ktoś się z tobą skontaktuje.";
                         }else{ 
                             $uploadStatus = 0; 
-                            $statusMsg = "Sorry, there was an error uploading your file."; 
+                            $statusMsg = "Przepraszamy, wystąpił błąd podczas przesyłania twojego skanu prawa jazdy. Spróbuj ponownie przesłać formularz."; 
                         } 
                     }else{ 
                         $uploadStatus = 0; 
-                        $statusMsg = 'Sorry, only '.implode('/', $allowFileTypes).' files are allowed to upload.'; 
+                        $statusMsg = 'Przepraszamy, ale dopuszczany rodzaj skanu prawa jazdy to: '.implode('/', $allowFileTypes).'. Zmień format pliku i spróbuj ponownie.'; 
                     } 
                 } 
                 
                 if($uploadStatus == 1){ 
                     // Email subject 
-                    $emailSubject = 'Contact Request Submitted by '.$name; 
-                    
+                    $emailSubject = 'Wynajem auta przez '.$name; 
+                    $emailSubject2 = 'Wynajem auta'; 
+                    //name (imie i nazwisko); phone(numer telefonu); email (email); adres (adres); data_od (od); data_do (do); attachment (skan prawka);
                     // Email message  
-                    $htmlContent = '<h2>Contact Request Submitted</h2> 
-                        <p><b>Name:</b> '.$name.'</p> 
+                    $htmlContent = '<h2>Wynajem auta:</h2> 
+                        <p><b>Imię i nazwisko:</b> '.$name.'</p> 
                         <p><b>Email:</b> '.$email.'</p> 
-                        <p><b>Subject:</b> '.$subject.'</p> 
-                        <p><b>Message:</b><br/>'.$message.'</p>'; 
+                        <p><b>Numer telefonu:</b> '.$phone.'</p>
+                        <p><b>Adres:</b> '.$adres.'</p>
+                        <p><b>Data od:</b> '.$data_od.'</p>
+                        <p><b>Data do:</b> '.$data_do.'</p>'; 
+                    $htmlContent2 = '<h2>Oto informacje które przesłałeś/aś w formularzu wynajmu auta:</h2> 
+                        <p><b>Imię i nazwisko:</b> '.$name.'</p> 
+                        <p><b>Email:</b> '.$email.'</p> 
+                        <p><b>Numer telefonu:</b> '.$phone.'</p>
+                        <p><b>Adres:</b> '.$adres.'</p>
+                        <p><b>Data od:</b> '.$data_od.'</p>
+                        <p><b>Data do:</b> '.$data_do.'</p>'; 
                     
                     // Header for sender info 
                     $headers = "From: $fromName"." <".$from.">"; 
+                    $headers2 = "From: $toName"." <".$toEmail.">"; 
         
                     // Add attachment to email 
                     if(!empty($uploadedFile) && file_exists($uploadedFile)){ 
@@ -85,14 +101,18 @@
                         
                         // Headers for attachment  
                         $headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";  
+                        $headers2 .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";  
                         
                         // Multipart boundary  
                         $message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" . 
                         "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n";  
+                        $message2 = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" . 
+                        "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent2 . "\n\n";  
                         
                         // Preparing attachment 
                         if(is_file($uploadedFile)){ 
                             $message .= "--{$mime_boundary}\n"; 
+                            $message2 .= "--{$mime_boundary}\n"; 
                             $fp =    fopen($uploadedFile,"rb"); 
                             $data =  fread($fp,filesize($uploadedFile)); 
                             fclose($fp); 
@@ -101,31 +121,37 @@
                             "Content-Description: ".basename($uploadedFile)."\n" . 
                             "Content-Disposition: attachment;\n" . " filename=\"".basename($uploadedFile)."\"; size=".filesize($uploadedFile).";\n" .  
                             "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n"; 
+                            $message2 .= "Content-Type: application/octet-stream; name=\"".basename($uploadedFile)."\"\n" .  
+                            "Content-Description: ".basename($uploadedFile)."\n" . 
+                            "Content-Disposition: attachment;\n" . " filename=\"".basename($uploadedFile)."\"; size=".filesize($uploadedFile).";\n" .  
+                            "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n"; 
                         } 
                         
                         $message .= "--{$mime_boundary}--"; 
-                        $returnpath = "-f" . $email; 
+                        $message2 .= "--{$mime_boundary}--"; 
                         
                         // Send email 
-                        $mail = mail($toEmail, $emailSubject, $message, $headers, $returnpath); 
+                        $mail = mail($toEmail, $emailSubject, $message, $headers); 
+                        $mail2 = mail($from, $emailSubject2, $message2, $headers2); 
                         
                         // Delete attachment file from the server 
-                        // @unlink($uploadedFile); 
+                        @unlink($uploadedFile); 
                     }else{ 
-                            // Set content-type header for sending HTML email 
+                        // Set content-type header for sending HTML email 
                         $headers .= "\r\n". "MIME-Version: 1.0"; 
                         $headers .= "\r\n". "Content-type:text/html;charset=UTF-8"; 
-                        echo("coś nie pykło");
+                        $headers2 .= "\r\n". "MIME-Version: 1.0"; 
+                        $headers2 .= "\r\n". "Content-type:text/html;charset=UTF-8"; 
                         // Send email 
-                        // $mail = mail($toEmail, $emailSubject, $htmlContent, $headers);  
+                        $mail = mail($toEmail, $emailSubject, $htmlContent, $headers);  
+                        $mail2 = mail($from, $emailSubject2, $message2, $headers2); 
                     };
                     
-                    // If mail sent 
-                    if($mail){ 
-                        echo("Dziękujemy za wysłanie zgłoszenia!");
-                    }else{ 
-                        echo("Coś nie pykło XD");
-                    };
+                    if($mail){
+                        print($statusMsg);
+                    }else{
+                        print("Coś poszło nie tak podczas wysyłania maila. Spróbuj ponownie.");
+                    }
                 };
             };
         };

@@ -19,13 +19,15 @@
         <div id="form_praca">
         <h2>Przeprowadzki</h2>
         <div id="send_form_status"></div>
-        <form method="post" action="" id="contact_form" enctype="multipart/form-data">
+        <form method="post" action="sendForm.php" id="contact_form" enctype="multipart/form-data">
             <p>Imię i nazwisko:</p>
             <input type="text" name="name" id="name" class="formField"/>
             <p>Numer telefonu:</p>
             <input type="text" name="phone" id="phone" class="formField"/>
             <p>Adres email:</p>
             <input type="text" name="email" id="email" class="formField"/>
+            <p>Data:</p>
+            <input type="date" name="data" id="data" min="<?php echo date("Y-m-d"); ?>" class="formField">
             <div id="adres_p11">
                 <p>Adres z:</p>
                 <input type="text" name="adres_p1" id="adres_p1" class="formField"/>

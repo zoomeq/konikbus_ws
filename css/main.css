@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  font-family: Verdana;
+  font-family: 'Segoe UI';
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -32,16 +32,26 @@ input[type=number] {
   header{
     width: 100%;
     background-color: #aaa;
-    height: 16rem;
+    height: 8rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     position: sticky;
     top: 0;
     z-index: 10;
+  }
+  #header1{
+    height: 16rem;
     padding-bottom: 1rem;
   }
-  header > img{
+  #himg1{
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  #himg2{
     max-height: 70%;
     flex-basis: 100%;
   }
@@ -110,9 +120,11 @@ input[type=number] {
     padding-bottom: 0;
   }
   #onas{
-    margin-top: 4%;
-    margin-bottom: 4%;
-    font-weight: bolder;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  #onas > h2{
+    font-size: 1.2em;
   }
   #mapa, .others, .socialmedia{
       margin-top: 1rem;
@@ -133,9 +145,11 @@ input[type=number] {
   .ofir::-webkit-scrollbar {
     width: 0px;
   }
+  #obszar{
+    background-color: rgba(255,255,255,0.4);
+  }
   #obszar > h1{
     width: 30%;
-    color: #e30613;
     float: left;
   }
   #obszar > hr{
@@ -186,10 +200,13 @@ input[type=number] {
     height: 100%;
   }
   #ofirmie{
-    background: rgb(138, 138, 128);
+    background: #aaa;
   }
-  #ofirmie_img > img{
+  #oimg1{
     width: 100%;
+  }
+  #oimg2{
+    display: none;
   }
   .insidepraca{
     border-radius: 20px;
@@ -247,6 +264,7 @@ input[type=number] {
     border: 2px #e30613 solid;
     border-radius: 20px;
     padding: 2%;
+    background-color: rgba(255,255,255,0.6);
   }
   #col1{
     width: 50%;
@@ -278,7 +296,7 @@ input[type=number] {
   header{
     width: 100%;
     background-color: #aaa;
-    height: 10rem;
+    height: 25rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -286,8 +304,26 @@ input[type=number] {
     top: 0;
     z-index: 10;
   }
-  header > img{
+  header > h1{
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  #oimg1{
+    display: none;
+  }
+  #oimg2{
+    width: 100%;
+    height: auto;
+  }
+  header > h2{
+    margin: 0;
+  }
+ #himg2{
     max-height: 100%;
+  }
+  #himg1{
+    display: none;
   }
   main{
     width: 100%;
@@ -352,6 +388,9 @@ input[type=number] {
   }
   #mapa{
     display: none;
+  }
+  #onas{
+    margin-top: 20px;
   }
   #mapa2, .others, .socialmedia{
     margin-top: 1rem;
