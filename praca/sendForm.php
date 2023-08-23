@@ -177,7 +177,7 @@
                     if($mail){
                         print($statusMsg);
                     }else{
-                        print("Coś poszło nie tak podczas wysyłania maila. Spróbuj ponownie.")
+                        print("Coś poszło nie tak podczas wysyłania maila. Spróbuj ponownie.");
                     }
                 };
             };
